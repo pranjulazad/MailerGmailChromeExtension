@@ -7,7 +7,8 @@ Befor using It You have to make changes in some files for your browser....
 related address but if you want to keep that file which named mailToFile.php(server file) (you can see clearly and provided in repository)
 on your online hosting websites then link that address to send the data after submitting the 'form(HTML)' in backMailer.js file.
 
-2.)In mailToFile.php file on line '31' (coincidentally!!) Same you have to require that PHPMailerAutoload.php file So Link It Accordingly
+2.)In mailToFile.php file on line '31' (coincidentally!!) Same you have to require that PHPMailerAutoload.php file So Link It Accordingly.
+Also In this File fill the some blanks Example->$mail->username,$mail->password etc.make changes at line 31,55,57,59,61 or near it.. 
 
 3.)In manifest.json , In the permissions property I have provided my localhost you just change it with some your related links where actually you kept your mailToFile.php file.
 
