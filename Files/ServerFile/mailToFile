@@ -52,13 +52,13 @@ $mail->SMTPSecure = 'tls';
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = "pranjul.azad@gmail.com";
+$mail->Username = "YOUR-GMAIL-USERNAME";
 //Password to use for SMTP authentication
-$mail->Password = "Pranjul420";
+$mail->Password = "GMAIL-PASSWORD";
 //Set who the message is to be sent from
-$mail->setFrom('pranjul.azad@gmail.com', 'Pranjul Azad');
+$mail->setFrom('YOUR-GMAIL-USERNAME', 'NAME');
 //Set an alternative reply-to address
-$mail->addReplyTo('pranjul.azad@gmail.com', 'Pranjul Azad');
+$mail->addReplyTo('YOUR-GMAIL-USERNAME', 'NAME or leave Blank');
 //Set who the message is to be sent to
 $mail->addAddress($data['email'], '');
 //Set the subject line
