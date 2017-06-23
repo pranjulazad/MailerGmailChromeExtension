@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name" : "Mailer",
+    "description" : "Send Mail Through Your Gmail Account Quickly and Instantly",
+    "browser_action" : {
+        "default_icon" : "gg.png",
+        "default_title" : "Mailer",
+        "default_popup" : "popup.html"
+    },
+
+    "icons" : {
+        "16":"gg.png",
+        "32":"gg.png",
+        "64":"gg.png",
+        "128":"gg.png"
+    },
+    "version": "1",
+    "permissions" : [
+        "http://locahost/*",
+        "storage",
+        "notifications"
+    ]   
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        input[type="text"] {
+            padding: 3px;
+            margin: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-family: -webkit-body;
+        }
+
+        input[type="submit"] {
+            background: sandybrown;
+            color: snow;
+            padding: 10px 26px;
+            display: block;
+            margin: 5px auto;
+            border-radius: initial;
+            border-color: cornflowerblue;
+        }
+
+        input[type="file"] {
+            width: 229px;
+            padding: 5px 0 5px 0;
+            background: #ddd;
+            font-size: 13px;
+            margin-left: 8px;
+        }
+
+        html {
+            BACKGROUND: ROYALBLUE;
+        }
+
+        h1 {
+            font-size: 16px;
+            color: floralwhite;
+            font-family: cursive;
+        }
+
+        input#file {
+            background: steelblue;
+        }
+    </style>
+    <link href="loader.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container" style="visibility : visible">
+        <h1>Send Your Message Instantly!!!</h1>
+        <!--action="http://localhost/extensionData/script.php" method="post"-->
+        <form id="data" action="" method="post" enctype="multipart/form-data">
+            <input type="text" name="subject" placeholder="Subject"><br>
+            <input type="text" name="msg" placeholder="Your Message" required><br>
+            <input type="text" name="email" placeholder="Receiver Email address" required><br>
+            <input type="file" name="file" id="file" title="Select less than 100Kb!!!">
+            <input type="submit" value="Send" name="submit">
+        </form>
+    </div>
+    <div id="loader" style="visibility : hidden"></div>
+    <!--<p id = "newdata"></p>-->
+    <script src="jquery.js"></script>
+    <script src="backMailer.js"></script>
+</body>
+
+</html>
