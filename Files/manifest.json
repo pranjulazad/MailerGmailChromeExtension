@@ -16,7 +16,7 @@
     },
     "version": "1",
     "permissions" : [
-        "http://locahost/*",
+        "https://*/*",
         "storage",
         "notifications"
     ]   
