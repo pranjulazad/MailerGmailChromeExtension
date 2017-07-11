@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        input[type="text"] {
+        input[type="text"],
+        input[type="password"] {
             padding: 3px;
             margin: 8px;
             text-align: center;
@@ -45,26 +46,59 @@
         input#file {
             background: steelblue;
         }
+
+        div#status {
+            font-size: 13px;
+            font-family: fantasy;
+        }
+
+        h2 {
+            text-align: center;
+            color: lightskyblue;
+            margin-bottom: -9px;
+            font-family: cursive;
+        }
+
+        h4#reset {
+            margin: -5px;
+            font-family: fantasy;
+            font-weight: 400;
+            font-size: 15px;
+            cursor: pointer;
+        }
     </style>
     <link href="loader.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="container" style="visibility : visible">
-        <h1>Send Your Message Instantly!!!</h1>
-        <!--action="http://localhost/extensionData/script.php" method="post"-->
-        <form id="data" action="" method="post" enctype="multipart/form-data">
-            <input type="text" name="subject" placeholder="Subject"><br>
-            <input type="text" name="msg" placeholder="Your Message" required><br>
-            <input type="text" name="email" placeholder="Receiver Email address" required><br>
-            <input type="file" name="file" id="file" title="Select less than 100Kb!!!">
+    <div id="emailContainer">
+        <form id="emailInfo">
+            <input type="text" name="emailAddress" placeholder="Your's Email Address" required><br>
+            <input type="password" name="pass" placeholder="Your's PassWord" required><br>
             <input type="submit" value="Send" name="submit">
         </form>
     </div>
-    <div id="loader" style="visibility : hidden"></div>
+    <div id="wholeContainer" style="display : none">
+        <div id="container" style="visibility : visible">
+            <h4 id="reset">Reset</h4>
+            <h2>Mailer</h2>
+            <h1>Send Your Message Instantly!!!</h1>
+            <!--action="http://localhost/extensionData/script.php" method="post"-->
+            <form id="data" action="" method="post" enctype="multipart/form-data">
+                <input type="text" name="subject" placeholder="Subject"><br>
+                <input type="text" name="msg" placeholder="Your Message" required><br>
+                <input type="text" name="email" placeholder="Receiver Email address" required><br>
+                <input type="file" name="upload" id="upload" title="Select less than 100Kb!!!">
+                <input type="submit" value="Send" name="submit">
+            </form>
+            <div id="status">Status : _____</div>
+        </div>
+        <div id="loader" style="visibility : hidden"></div>
+    </div>
     <!--<p id = "newdata"></p>-->
     <script src="jquery.js"></script>
     <script src="backMailer.js"></script>
+    <script src="AES.js"></script>
 </body>
 
 </html>
